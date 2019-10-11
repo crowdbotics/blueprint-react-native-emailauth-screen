@@ -1,4 +1,4 @@
-# CB Messaging Blueprint 
+# CB EmailAuth Blueprint 
 
 This is a EmailAuth Blueprint.
 
