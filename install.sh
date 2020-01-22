@@ -22,7 +22,7 @@ NAME="EmailAuth"
 EXT_POINT_1="@BlueprintInsertion"
 EXT_POINT_2="@BlueprintImportInsertion"
 EXT_POINT_3="@BlueprintNavigationInsertion"
-DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}'},"
+DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}', icon: 'envelope-o'},"
 DATA_2="import { ${BLUEPRINT}Navigator } from '..\/features\/${BLUEPRINT}\/navigator';"
 DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
 
@@ -34,7 +34,6 @@ cp -r ./$BLUEPRINT/. $BASE_PATH/src/features/$BLUEPRINT
 
 echo ">> insert 1" 
 sed -i "s/${EXT_POINT_1}/&\n${DATA_1}/g" $BASE_PATH/src/config/installed_blueprints.js
-
 
 echo ">> insert 2"
 sed -i "s/${EXT_POINT_2}/&\n${DATA_2}/g" $BASE_PATH/src/navigator/mainNavigator.js
