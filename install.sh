@@ -16,25 +16,23 @@ source blueprint-lib/init.sh
 # APP_NAME is the name of the Django app that will be modified
 ##
 
-BLUEPRINT="EmailAuthBlueprint"
 NAME="EmailAuth"
 
 EXT_POINT_1="@BlueprintInsertion"
 EXT_POINT_2="@BlueprintImportInsertion"
 EXT_POINT_3="@BlueprintNavigationInsertion"
-DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}'},"
-DATA_2="import { ${BLUEPRINT}Navigator } from '..\/features\/${BLUEPRINT}\/navigator';"
-DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
+DATA_1="{ name: '${NAME}', human_name: '${NAME}', access_route: '${NAME}', icon: 'envelope-o'},"
+DATA_2="import { ${NAME}Navigator } from '..\/features\/${NAME}\/navigator';"
+DATA_3="${NAME}: { screen: ${NAME}Navigator },"
 
 echo "create blueprint folder"
-mkdir -p $BASE_PATH/src/features/$BLUEPRINT
+mkdir -p $BASE_PATH/src/features/$NAME
 
 echo "copy"
-cp -r ./$BLUEPRINT/. $BASE_PATH/src/features/$BLUEPRINT
+cp -r ./$NAME/. $BASE_PATH/src/features/$NAME
 
 echo ">> insert 1" 
 sed -i "s/${EXT_POINT_1}/&\n${DATA_1}/g" $BASE_PATH/src/config/installed_blueprints.js
-
 
 echo ">> insert 2"
 sed -i "s/${EXT_POINT_2}/&\n${DATA_2}/g" $BASE_PATH/src/navigator/mainNavigator.js
