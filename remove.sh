@@ -24,7 +24,7 @@ DATA_2="import { ${BLUEPRINT}Navigator } from '..\/features\/${BLUEPRINT}\/navig
 DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
 DATA_4="import { ${NAME}Reducer } from '..\/features\/${NAME}\/redux\/reducers';"
 DATA_5="${NAME}: ${NAME}Reducer,"
-DATA_6="import { ${NAME}Saga } from '..\/features\/${NAME}\/redux\/sagas';"
+DATA_6="import ${NAME}Saga from '..\/features\/${NAME}\/redux\/sagas';"
 DATA_7="${NAME}Saga,"
 
 echo ">> remove blueprint folder"
