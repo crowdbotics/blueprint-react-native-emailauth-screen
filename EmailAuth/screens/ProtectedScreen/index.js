@@ -4,6 +4,7 @@ import {Layout, Text, Button} from 'react-native-ui-kitten';
 
 import {logout} from '../../redux/actions';
 import * as NavigationService from '../../../../navigator/NavigationService';
+import {styles} from '../styles';
 
 const ProtectedScreen = ({accessToken, actions}) => {
   return (
@@ -26,7 +27,7 @@ const mapDispatchToProps = dispatch => ({
     logoutAction: _ => {
       //this does not need a saga, it is sync action
       dispatch(logout());
-      NavigationService.navigateAndResetStack('SplashScreen');
+      NavigationService.navigateAndResetStack('SignIn');
     },
   },
 });
