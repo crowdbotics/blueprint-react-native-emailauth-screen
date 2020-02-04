@@ -30,7 +30,7 @@ DATA_2="import { ${NAME}Navigator } from '..\/features\/${NAME}\/navigator';"
 DATA_3="${NAME}: { screen: ${NAME}Navigator },"
 DATA_4="import { ${NAME}Reducer } from '..\/features\/${NAME}\/redux\/reducers';"
 DATA_5="${NAME}: ${NAME}Reducer,"
-DATA_6="import { ${NAME}Saga } from '..\/features\/${NAME}\/redux\/sagas';"
+DATA_6="import ${NAME}Saga from '..\/features\/${NAME}\/redux\/sagas';"
 DATA_7="${NAME}Saga,"
 
 echo "create blueprint folder"
