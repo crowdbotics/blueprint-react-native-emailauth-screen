@@ -7,7 +7,7 @@ import ProtectedScreen from "./screens/ProtectedScreen";
 import ConfirmationRequiredScreen from "./screens/ConfirmationRequired";
 import Home from "./screens/";
 
-export const EmailAuthNavigator = createStackNavigator(
+export default EmailAuthNavigator = createStackNavigator(
   {
     Home: { screen: Home },
     SignIn: { screen: SignInScreen },
