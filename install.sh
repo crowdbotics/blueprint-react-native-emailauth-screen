@@ -36,19 +36,19 @@ EXT_POINT_4="@BlueprintReduxImportInsertion"
 EXT_POINT_5="@BlueprintReduxCombineInsertion"
 EXT_POINT_6="@BlueprintReduxSagaImportInsertion"
 EXT_POINT_7="@BlueprintReduxSagaMainInsertion"
-DATA_1="{ name: '${NAME}', human_name: '${NAME}', access_route: '${NAME}', icon: 'envelope-o'},"
-DATA_2="import ${NAME}Navigator from '..\/features\/${NAME}\/navigator';"
-DATA_3="${NAME}: { screen: ${NAME}Navigator },"
-DATA_4="import { ${NAME}Reducer } from '..\/features\/${NAME}\/redux\/reducers';"
-DATA_5="${NAME}: ${NAME}Reducer,"
-DATA_6="import ${NAME}Saga from '..\/features\/${NAME}\/redux\/sagas';"
-DATA_7="${NAME}Saga,"
+DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}', icon: 'envelope-o'},"
+DATA_2="import ${BLUEPRINT}Navigator from '..\/features\/${BLUEPRINT}\/navigator';"
+DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
+DATA_4="import { ${BLUEPRINT}Reducer } from '..\/features\/${BLUEPRINT}\/redux\/reducers';"
+DATA_5="${BLUEPRINT}: ${BLUEPRINT}Reducer,"
+DATA_6="import ${BLUEPRINT}Saga from '..\/features\/${BLUEPRINT}\/redux\/sagas';"
+DATA_7="${BLUEPRINT}Saga,"
 
 echo "create blueprint folder"
-mkdir -p $BASE_PATH/src/features/$NAME
+mkdir -p $BASE_PATH/src/features/$BLUEPRINT
 
 echo "copy"
-cp -r ./$NAME/. $BASE_PATH/src/features/$NAME
+cp -r ./EmailAuth/. $BASE_PATH/src/features/$BLUEPRINT
 
 echo ">> insert 1" 
 sed -i "s/${EXT_POINT_1}/&\n${DATA_1}/g" $BASE_PATH/src/config/installed_blueprints.js

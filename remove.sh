@@ -32,10 +32,10 @@ fi
 DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}'},"
 DATA_2="import ${BLUEPRINT}Navigator from '..\/features\/${BLUEPRINT}\/navigator';"
 DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
-DATA_4="import { ${NAME}Reducer } from '..\/features\/${NAME}\/redux\/reducers';"
-DATA_5="${NAME}: ${NAME}Reducer,"
-DATA_6="import ${NAME}Saga from '..\/features\/${NAME}\/redux\/sagas';"
-DATA_7="${NAME}Saga,"
+DATA_4="import { ${BLUEPRINT}Reducer } from '..\/features\/${BLUEPRINT}\/redux\/reducers';"
+DATA_5="${BLUEPRINT}: ${BLUEPRINT}Reducer,"
+DATA_6="import ${BLUEPRINT}Saga from '..\/features\/${BLUEPRINT}\/redux\/sagas';"
+DATA_7="${BLUEPRINT}Saga,"
 
 echo ">> remove blueprint folder"
 if [ -d "$BASE_PATH/src/features/$BLUEPRINT" ]; then rm -Rf $BASE_PATH/src/features/$BLUEPRINT; fi
