@@ -32,7 +32,7 @@ fi
 DATA_1="{ name: '${BLUEPRINT}', human_name: '${NAME}', access_route: '${BLUEPRINT}'},"
 DATA_2="import ${BLUEPRINT}Navigator from '..\/features\/${BLUEPRINT}\/navigator';"
 DATA_3="${BLUEPRINT}: { screen: ${BLUEPRINT}Navigator },"
-DATA_4="import { ${BLUEPRINT}Reducer } from '..\/features\/${BLUEPRINT}\/redux\/reducers';"
+DATA_4="import ${BLUEPRINT}Reducer from '..\/features\/${BLUEPRINT}\/redux\/reducers';"
 DATA_5="${BLUEPRINT}: ${BLUEPRINT}Reducer,"
 DATA_6="import ${BLUEPRINT}Saga from '..\/features\/${BLUEPRINT}\/redux\/sagas';"
 DATA_7="${BLUEPRINT}Saga,"
