@@ -6,7 +6,7 @@ const initialState = {
   errors: { SignIn: null, SignUp: null, PasswordRecover: null }
 };
 
-export const EmailAuthReducer = (state = initialState, action) => {
+export default EmailAuthReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.EMAIL_AUTH_LOGIN_SUCCESS:
       return { ...state, accessToken: action.accessToken };
